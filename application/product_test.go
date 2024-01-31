@@ -2,8 +2,8 @@ package application_test
 
 import (
 	"github.com/othiagosilva/arquitetura-hexagonal/application"
-	"testing"
 	"github.com/stretchr/testify/require"
+	"testing"
 )
 
 func TestProduct_Enable(t *testing.T) {
@@ -11,4 +11,7 @@ func TestProduct_Enable(t *testing.T) {
 	product.Name = "Hello"
 	product.Status = application.DISABLED
 	product.Price = 10
+
+	err:= product.Enable()
+	require.Nil(t, err)
 }
