@@ -5,8 +5,7 @@ ENV PATH="/go/bin:${PATH}"
 
 RUN go get -u github.com/spf13/cobra@latest && \
     go install github.com/golang/mock/mockgen@v1.5.0 && \
-    go install github.com/spf13/cobra-cli@latest \
-    go get github.com/stretchr/testify/require
+    go install github.com/spf13/cobra-cli@latest
 
 RUN apt-get update && apt-get install sqlite3 -y
 
